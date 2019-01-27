@@ -4,7 +4,7 @@ const path = require('path');
 const getPng = (async () => {
   const browser = await puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox']});
   const page = await browser.newPage();
-  await page.goto(`file://${path.resolve(__dirname, 'argo.svg')}`);
+  await page.goto(`file://${path.resolve(__dirname, 'min.svg')}`);
   const png = await page.screenshot({omitBackground: true, encoding: 'base64' });
   await browser.close();
   return png;
