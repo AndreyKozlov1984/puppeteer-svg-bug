@@ -18,8 +18,9 @@ async function main() {
             result.push(png);
         }
     }
+    // output: [ 64760, 64744 ]
+    // expected output: an array with a single element
     console.info(result.map( (x) => x.length));
-    //output: [ 64760, 64744 ]
 
 }
 main().catch(console.info);
